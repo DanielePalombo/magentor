@@ -11,6 +11,7 @@ module Magento
     def client
       @client ||= XMLRPC::Client.new(config[:host], config[:path], config[:port])
       @client.timeout = 3600
+      @client
     end
 
     def connect
